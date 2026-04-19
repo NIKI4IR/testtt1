@@ -1,0 +1,506 @@
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    margin: 8px;
+    overflow-y: scroll;
+    background-color: #fff;
+    color: #1a1a1a;
+    font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+div {
+    display: block;
+}
+
+.root {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.header {
+    background: #003580;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.logo {
+    flex-grow: 1;
+    padding: 8px 16px 8px 0;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a {
+    color: #006ce4 !important;
+    cursor: pointer;
+    text-decoration: none !important;
+    touch-action: manipulation;
+}
+
+button, input, optgroup, select, textarea {
+    color: var(--bui_color_foreground);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+
+.actions {
+    display: flex;
+    pointer-events: none;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: calc(8px * -1);
+    margin-top: calc(8px * -1);
+}
+
+.lang {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    pointer-events: all;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.lang__btn {
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: var(--bui_border_radius_100);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+    color: currentcolor;
+    min-height: calc(4 * 12);
+    min-width: calc(4 * 12);
+    padding: 8px 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.lang__btn::before {
+    border: var(--bui_border_width_100) solid transparent;
+    border-radius: var(--bui_border_radius_100);
+    bottom: 0;
+    box-sizing: border-box;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.lang__btn span {
+    position: relative;
+}
+
+.lang__btn div {
+    overflow: hidden;
+    padding: 0;
+    border-radius: 9999px;
+    align-items: center;
+    background-color: #474747;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    height: 24px;
+    line-height: 18px;
+    width: 24px;
+}
+
+.lang__btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quest {
+    flex-shrink: 0;
+    pointer-events: all;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: 8px;
+    display: flex;
+    padding: 8px 12px;
+}
+
+.quest svg {
+    width: 20px;
+    height: 20px;
+}
+
+.app__wrapper {
+    padding: 16px 16px 0;
+}
+
+.app__body {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.panel__wrapper {
+    margin: 0 -4px;
+    overflow: hidden;
+    padding: 0 4px 10px;
+}
+
+.panel__animate {
+    height: auto;
+    transition: .3s;
+}
+
+.panel__container {
+    height: auto;
+    overflow: visible;
+}
+
+.panel__body {
+    position: relative;
+    word-break: break-word;
+}
+
+.app__footer {
+    padding: 16px;
+}
+
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.footer__block {
+    border-top: 1px solid #e7e7e7;
+    padding: 16px 0;
+}
+
+.footer__block a {
+    color: #006ce4;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+.panel__title h1 {
+    margin: 0 0 8px 0;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.spacer {
+    margin-bottom: 32px;
+}
+
+.input__wrapper {
+    margin-bottom: 16px;
+}
+
+label {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    padding: 0 0 4px;
+    align-items: flex-end;
+}
+
+.input__box {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    flex-grow: 1;
+    height: calc(4px * 9);
+    margin: 0;
+    outline: none;
+    padding: 4px 8px;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    border: 1px solid #868686;
+    background-repeat: 4px;
+    padding-right: 36px;
+}
+
+input:focus {
+    border-color: #006ce4;
+    border-width: 2px;
+}
+
+.form .button__wrapper {
+    margin-bottom: 24px;
+}
+
+.btn {
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    min-height: calc(4px * 12);
+    min-width: calc(4px * 12);
+    padding: 8px 16px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 4px;
+    background-color: #006ce4;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.btn__empty {
+    border: 1px solid #006ce4;
+    background-color: transparent;
+    color: #006ce4;
+}
+
+.text-center {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 8px 8px;
+    text-align: center;
+}
+
+.text-center a {
+    text-decoration: none;
+}
+
+.text-partner {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 12px;
+    margin-top: 30px;
+}
+input {
+    text-indent: 10px;
+}
+hr {
+    border: 0;
+    margin-bottom: 16px;
+    border-top: 1px solid #e7e7e7;
+}
+
+#first.notValid .errorMessageNotValid {
+    display: block;
+}
+
+#first.notValid #loginname {
+    border: 1px solid #d4111e;
+}
+
+#first.notValid .attention {
+    display: flex;
+}
+
+#first.wrongLogin .errorMessageWrong {
+    display: block;
+}
+
+#first.wrongLogin #loginname {
+    border: 1px solid #d4111e;
+}
+
+#first.wrongLogin .attention {
+    display: flex;
+}
+
+/*#togglePassword:hover {*/
+
+/*    border-top: 1px solid #d4111e;*/
+/*    border-right: 1px solid #d4111e;*/
+/*    border-bottom: 1px solid #d4111e;*/
+/*    border-left: none;  !* Убираем левую границу *!*/
+
+/*    background-color: #e8e8e8;*/
+/*}*/
+
+#togglePassword, .attention {
+    position: absolute;
+    padding: 0 8px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#togglePassword span {
+    font-size: inherit;
+}
+
+#second {
+
+}
+
+#second .button__wrapper {
+    margin-bottom: 24px;
+}
+
+.errorMessage, .errorMessageWrong {
+    display: none;
+    margin-top: 4px;
+    color: #d4111e;
+}
+
+.btn:hover {
+    background-color: #003b95;
+}
+
+.btn:disabled {
+    background-color: #e7e7e7;
+    color: #868686;
+    cursor: not-allowed;
+}
+
+#third {
+
+}
+
+#third .panel__text {
+    margin-bottom: 36px;
+}
+
+.next__block {
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #006ce4;
+    font-size: 14px;
+}
+
+.next__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.next__text {
+    display: flex;
+    align-items: center;
+    /*gap: 10px;*/
+}
+
+.next__icon {
+    display: flex;
+}
+
+#fourth {
+
+}
+
+#fifth {
+
+}
+
+.attention {
+    color: #d4111e;
+    font-size: 20px;
+    display: none;
+}
+
+#second .attention {
+    right: 32px;
+}
+
+
+@media screen and (min-width: 580px) {
+    .app__wrapper {
+        margin-top: 48px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        margin: 0 auto;
+        max-width: 1140px;
+        box-sizing: border-box;
+        padding: 12px 32px 8px;
+    }
+}
