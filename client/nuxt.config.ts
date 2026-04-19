@@ -1,0 +1,80 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+    compatibilityDate: '2024-04-03',
+    devtools: {enabled: true},
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
+    css: [
+        '~/assets/css/style.css',
+        '~/assets/css/normalize.css',
+        '~/assets/css/tailwind.css',
+        '~/assets/css/symbols.css'],
+    modules: ['@nuxtjs/i18n', "@nuxt/ui", "@vue-final-modal/nuxt", "@nuxt/image"],
+    plugins: [
+        '~/plugins/i18n-geo.ts'
+    ],
+    i18n: {
+        langDir: './lang',
+        defaultLocale: 'us',
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+            redirectOn: 'root',
+            alwaysRedirect: true,
+            fallbackLocale: 'us'
+        },
+        strategy: 'no_prefix',
+        locales: [
+            { code: 'us', name: 'American English', file: 'en-US.ts' },
+            { code: 'de', name: 'Deutsch', file: 'de-DE.ts' },
+            { code: 'ee', name: 'Eesti', file: 'et-EE.ts' },
+            { code: 'gb', name: 'English', file: 'en-GB.ts' },
+            { code: 'es', name: 'Español', file: 'es-ES.ts' },
+            { code: 'ar', name: 'Español en Argentina', file: 'es-AR.ts' },
+            { code: 'ph', name: 'Filipino', file: 'fil-PH.ts' },
+            { code: 'hr', name: 'Hrvatski', file: 'hr-HR.ts' },
+            { code: 'id', name: 'Indonesia', file: 'id-ID.ts' },
+            { code: 'it', name: 'Italiano', file: 'it-IT.ts' },
+            { code: 'lv', name: 'Latviešu', file: 'lv-LV.ts' },
+            { code: 'lt', name: 'Lietuvių', file: 'lt-LT.ts' },
+            { code: 'hu', name: 'Magyar', file: 'hu-HU.ts' },
+            { code: 'my', name: 'Melayu', file: 'ms-MY.ts' },
+            { code: 'nl', name: 'Nederlands', file: 'nl-NL.ts' },
+            { code: 'no', name: 'Norsk', file: 'no-NO.ts' },
+            { code: 'pt', name: 'Português', file: 'pt-PT.ts' },
+            { code: 'br', name: 'Português do Brasil', file: 'pt-BR.ts' },
+            { code: 'sk', name: 'Slovenčina', file: 'sk-SK.ts' },
+            { code: 'fi', name: 'Suomi', file: 'fi-FI.ts' },
+            { code: 'se', name: 'Svenska', file: 'sv-SE.ts' },
+            { code: 'vn', name: 'Tiếng Việt', file: 'vi-VN.ts' },
+            { code: 'tr', name: 'Türkçe', file: 'tr-TR.ts' },
+            { code: 'ca', name: 'català', file: 'ca-ES.ts' },
+            { code: 'dk', name: 'dansk', file: 'da-DK.ts' },
+            { code: 'fr', name: 'français', file: 'fr-FR.ts' },
+            { code: 'pl', name: 'polski', file: 'pl-PL.ts' },
+            { code: 'ro', name: 'română', file: 'ro-RO.ts' },
+            { code: 'si', name: 'slovenščina', file: 'sl-SI.ts' },
+            { code: 'rs', name: 'srpski', file: 'sr-RS.ts' },
+            { code: 'is', name: 'íslenska', file: 'is-IS.ts' },
+            { code: 'cz', name: 'čeština', file: 'cs-CZ.ts' },
+            { code: 'gr', name: 'Ελληνικά', file: 'el-GR.ts' },
+            { code: 'bg', name: 'Български', file: 'bg-BG.ts' },
+            { code: 'ru', name: 'Русский', file: 'ru-RU.ts' },
+            { code: 'ua', name: 'Українська', file: 'uk-UA.ts' },
+            { code: 'il', name: 'עברית', file: 'he-IL.ts' },
+            { code: 'ae', name: 'العربية', file: 'ar-SA.ts' },
+            { code: 'in', name: 'हिन्दी', file: 'hi-IN.ts' },
+            { code: 'th', name: 'ไทย', file: 'th-TH.ts' },
+            { code: 'ge', name: 'ქართული ენა', file: 'ka-GE.ts' },
+            { code: 'cn', name: '中文', file: 'zh-CN.ts' },
+            { code: 'jp', name: '日本語', file: 'ja-JP.ts' },
+            { code: 'tw', name: '繁體中文', file: 'zh-TW.ts' },
+            { code: 'kr', name: '한국어', file: 'ko-KR.ts' }
+        ],
+        vueI18n: './i18n.config.ts'
+    }
+})
